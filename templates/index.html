@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <title>EcoWatchAI</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='images/favicon-16x16.png') }}">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>EcoWatchAI</h1>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <div class="search-input-container">
+            <input type="text" id="searchBar" placeholder="Search Wildlife species...">
+            <button onclick="search(document.getElementById('searchBar').value)" class="btn-info"><img src="{{ url_for('static', filename='images/search.png') }}" alt=""></button>
+        </div>
+    </div>
+
+    <div class="upload-section">
+        <p>Upload images of wildlife species</p>
+        <input type="file" accept="image/*" id="uploadInput" onchange="uploadMedia()">
+        <label for="uploadInput" class="btn-info">Upload Image</label>
+    </div>
+
+    <div class="container">
+        <p>Recognize Wildlife Species using camera</p>
+        <div class="camera-container">
+            <video id="camera" autoplay playsinline></video>
+            <img id="capturedImage" src="{{ url_for('static', filename='images/placeholder-image.png') }}" alt="Camera Placeholder">
+        </div>
+
+        <div class="buttons-section">
+            <div class="camera-buttons">
+                <button onclick="startCamera()" class="btn-primary">Start</button>
+                <button onclick="stopCamera()" class="btn-danger">Stop</button>
+                <button onclick="captureImage()" class="btn-success">Capture</button>
+            </div>
+        </div>
+
+        <div id="preview-section" class="preview-container">
+            <p id="preview-text">Captured/Uploaded Species</p>
+            <img id="preview-image">
+
+            <form method="post" enctype="multipart/form-data" name="form1">
+                <div class="action-buttons">
+                    <button onclick="identifySpecies()" class="btn-warning" type="submit" id="identify-button">Identify</button>
+                    <button onclick="resetApp()" class="btn-secondary">Reset</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="processed-section" class="preview-container">
+            <p>Wildlife Species - </p>
+            <p id="processed-text"></p>
+            <p id="processed-info"></p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 EcoWatchAI. All rights reserved.</p>
+        <p>Made by - <a href="https://www.instagram.com/ayushkulal20">Ayush</a>, <a href="https://www.instagram.com/_adityagholap_">Aditya</a> & <a href="https://www.instagram.com/i22_brijesh">Brijesh</a></p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

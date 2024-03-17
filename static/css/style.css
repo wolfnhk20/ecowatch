@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Mukta:wght@700&family=Sora:wght@400;500;600;700;800&display=swap');
+
+body {
+    font-family: 'Sora', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #121212;
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    flex: 1;
+    padding: 20px;
+}
+
+header {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: auto;
+}
+
+header h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.header-container p {
+    font-size: 18px;
+}
+
+.camera-container {
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #323232;
+}
+
+#camera {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.camera-container img {
+    display: none;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.buttons-section {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    background-color: #121212;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+
+
+.camera-buttons,
+.upload-button,
+.action-buttons,
+.search-container {
+    flex: 1 1 calc(50% - 20px);
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.camera-buttons button,
+.upload-button input,
+.action-buttons button,
+.search-container input,
+.search-container button {
+    flex: 1;
+    padding: 15px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+.camera-buttons button,
+.upload-button label,
+.action-buttons button,
+.search-container button {
+    cursor: pointer;
+    margin: 5px;
+}
+
+#preview-section {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+
+#preview-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#image-info {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Adjusted the size of Identify and Reset buttons */
+.action-buttons button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+    margin: 5px;
+}
+
+/* Hover effect for the search button */
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+/* Style the upload section */
+.upload-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-section input {
+    display: none;
+}
+
+.upload-section label {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-section label:hover {
+    background-color: #0056b3;
+}
+
+/* Footer styling */
+footer {
+    background-color: #007BFF;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    bottom: 0;
+    /* width: 100%; */
+}
+
+@media screen and (max-width: 600px) {
+
+    .camera-buttons,
+    .upload-button,
+    .action-buttons,
+    .search-container {
+        flex: 1 1 100%;
+        margin: 10px 0;
+    }
+
+    #preview-section {
+        margin-bottom: 10px;
+    }
+
+    #searchBar {
+        width: 100%;
+    }
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+}
+
+.search-container input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.search-container button {
+    flex: 0;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the search button */
+.search-container button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+    .search-container input {
+        width: 100%;
+    }
+}
+
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.search-input-container {
+    display: flex;
+    flex: 1;
+}
+
+#searchBar {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    width: 70%;
+    box-sizing: border-box;
+}
+
+#searchButton {
+    flex: 0;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for the search button */
+#searchButton:hover {
+    background-color: #0056b3;
+}
+
+#processed-image {
+    max-width: 100%;
+    max-height: 300px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+}
+
+#processed-text {
+    font-size: 20px;
+    font-weight: 500;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+#processed-info {
+    font-size: 14px;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.processed-container {
+    display: none;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+#processed-section {
+    display: none;
+    color: #fff;
+    font-size: 16px;
+}
+
+.btn-secondary {
+    flex: 0;
+    padding: 15px;
+    background-color: #5e5e5e;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
