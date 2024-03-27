@@ -92,11 +92,6 @@ notebook==7.0.7
 notebook_shim==0.2.3
 numpy==1.26.3
 oauthlib==3.2.2
-onnx==1.15.0
-onnx-graphsurgeon==0.3.27
-onnx2tf==1.17.5
-onnxruntime==1.16.3
-onnxsim==0.4.35
 opencv-contrib-python==4.9.0.80
 opencv-python==4.9.0.80
 openvino==2023.2.0
